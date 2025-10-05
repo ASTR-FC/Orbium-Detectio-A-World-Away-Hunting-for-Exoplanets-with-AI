@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+        
+    <h2>L'Enjeu</h2>
+    <p>
+        Les données de plusieurs missions spatiales d'arpentage d'exoplanètes, telles que Kepler, K2 et TESS, ont permis la découverte de milliers de nouvelles planètes en dehors de notre système solaire. Cependant, la plupart de ces exoplanètes ont été identifiées manuellement. Avec les progrès de l'intelligence artificielle et de l'apprentissage automatique (IA/ML), il est désormais possible d'analyser automatiquement de grands ensembles de données collectées par ces missions pour identifier les exoplanètes de manière plus efficace.
+    </p>
+    <div class="highlight">
+        <p>
+            L'identification des exoplanètes est un domaine en pleine expansion dans l'exploration astronomique. Les missions Kepler, K2 et TESS ont fourni des données précieuses, mais leur analyse reste en grande partie manuelle. L'automatisation de cette analyse grâce à l'IA/ML peut accélérer les découvertes et rendre ce domaine plus accessible.
+        </p>
+    </div>
+
+
+
+    <h2>Notre Mission : Répondre à la Problématique</h2>
+    <p>
+        Notre mission est de créer un modèle d'IA/ML formé sur les ensembles de données d'exoplanètes open-source de la NASA, capable d'analyser de nouvelles données pour identifier avec précision les exoplanètes. Nous avons développé une solution qui utilise des algorithmes d'apprentissage automatique pour analyser les données de transit et identifier les exoplanètes de manière automatisée.
+    </p>
+    <div class="highlight">
+        <p>
+            Nous avons utilisé des ensembles de données des missions Kepler, K2 et TESS pour entraîner notre modèle. Notre solution permet non seulement d'identifier les exoplanètes, mais aussi de faciliter l'interaction des utilisateurs avec les données grâce à une interface web intuitive.
+        </p>
+    </div>
+    <p>
+        Notre modèle prend en compte plusieurs variables, telles que la période orbitale, la durée de transit, et le rayon planétaire, pour classer chaque point de données comme une exoplanète confirmée, un candidat planétaire ou un faux positif. Nous avons également intégré des fonctionnalités pour permettre aux utilisateurs de télécharger de nouvelles données et de visualiser les résultats de manière claire et concise.
+    </p>
+
+
+    <h2>Manpage de l'Application Web</h2>
+    <h3>Description</h3>
+    <p>
+        Notre application web permet aux utilisateurs d'analyser des ensembles de données de transit pour identifier les exoplanètes. Elle offre une interface intuitive pour télécharger des fichiers de données, visualiser les résultats et interagir avec les prédictions du modèle.
+    </p>
+
+    <h3>Fonctionnalités</h3>
+    <ul>
+        <li><strong>Upload de données :</strong> Téléchargez vos fichiers CSV contenant les données de transit.</li>
+        <li><strong>Analyse en temps réel :</strong> Obtenez des prédictions instantanées via notre modèle entraîné.</li>
+        <li><strong>Visualisation des résultats :</strong> Visualisez les résultats avec des graphiques et des statistiques.</li>
+        <li><strong>Mise à jour du modèle :</strong> Ré-entraînez le modèle avec de nouvelles données.</li>
+        <li><strong>Tweaking des hyperparamètres :</strong> Ajustez les paramètres du modèle pour les utilisateurs avancés.</li>
+        <li><strong>Export des résultats :</strong> Téléchargez les prédictions au format CSV ou PDF.</li>
+    </ul>
+
+    <h3>Utilisation</h3>
+    <ol>
+        <li>Accédez à la page d'analyse via le menu de navigation.</li>
+        <li>Téléchargez un fichier CSV contenant vos données de transit.</li>
+        <li>Visualisez les résultats de l'analyse.</li>
+        <li>Exportez les résultats si nécessaire.</li>
+    </ol>
+
+    <h3>Public Cible</h3>
+    <p>
+        Notre application est conçue pour les chercheurs qui veulent classer de nouvelles données, ainsi que pour les novices dans le domaine qui veulent interagir avec les données des exoplanètes et ne savent pas par où commencer.
+    </p>
+{% endblock %}

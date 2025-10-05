@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Orbium Detectio - {% block title %}{% endblock %}</title>
+
+        <!-- Lien vers l'icône pour chaque type d'appareil -->
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/logo/favicon-96x96.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/logo/apple-touch-icon.png') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='assets/logo/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ url_for('static', filename='assets/logo/favicon.svg') }}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/global/themes.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/public/base.css') }}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+        {% block head %}{% endblock %}
+    </head>
+
+    <body class="theme-transition dark">
+        <header>
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='assets/logo/orbium_logo_nom.jpg') }}" alt="Logo Orbium" class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Accueil</a></li>
+                    <li><a href="{{ url_for('analyse') }}">Analyse</a></li>
+                    <li><a href="{{ url_for('compte') }}">Compte</a></li>
+                    <li><a href="{{ url_for('apropos') }}">À propos</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <span class="copy">NASA Space App Challenge - ASTRA-FC tout droit réservé &copy; 2025</span>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        {% block scripts %}{% endblock %}
+    </body>
+</html>
